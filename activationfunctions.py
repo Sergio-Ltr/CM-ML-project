@@ -43,14 +43,12 @@ def leaky_relu_prime(x, leak=0.3):
 
 
 def softmax(x):
-    # TODO: check this
     # return the softmax value of x
     exp = np.exp(x - x.max())  # subtract max for numerical stability
     return exp / exp.sum(axis = 0)
 
 
 def softmax_prime(x):
-    # TODO: check this
     # derivative of the softmax function
     jacobian_m = np.diag(x)
     s = []
